@@ -1,0 +1,63 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="8616c633-62d7-b56f-17fe-9c4594d51fa1"/>
+    <mxCell id="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" parent="8616c633-62d7-b56f-17fe-9c4594d51fa1"/>
+    <start id="e7544581-66c5-aed5-8931-36ccd74f0f94">
+      <mxCell style="image;image=images/symbols/event.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="123" y="108" width="25" height="25" as="geometry"/>
+      </mxCell>
+    </start>
+    <end id="f56c3ceb-a503-8dca-1b3a-0ff14b0eba86">
+      <mxCell style="image;image=images/symbols/terminate.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="1044" y="108" width="25" height="25" as="geometry"/>
+      </mxCell>
+    </end>
+    <rule name="assignOwnership" properties="{&quot;properties.owner&quot;:&quot;${createdBy}&quot;}" id="4540ce3c-d228-1fba-d293-1decaa61d7fe">
+      <mxCell style="image;image=images/owner.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="255" y="210" width="38" height="38" as="geometry"/>
+      </mxCell>
+    </rule>
+    <party label="Owner" to="${owner}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" id="742c6e3c-533e-3029-2d88-d693f7c35a9a">
+      <mxCell style="image;image=images/user.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="250" y="96.5" width="48" height="48" as="geometry"/>
+      </mxCell>
+    </party>
+    <mxCell id="1423dd3d-b505-a9f4-372e-fb51de792378" value="owner == null || owner == &#39;&#39;" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="e7544581-66c5-aed5-8931-36ccd74f0f94" target="4540ce3c-d228-1fba-d293-1decaa61d7fe" label="No owner">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="136" y="234"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="b842a32f-8485-5c4f-ecc3-dd7a621d9bc8" value="owner != null &amp;&amp; owner != &#39;&#39;" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="e7544581-66c5-aed5-8931-36ccd74f0f94" target="742c6e3c-533e-3029-2d88-d693f7c35a9a" label="Owner set">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="850c2a74-cd4f-deb5-7e55-dff2d3159ddb" value="" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="4540ce3c-d228-1fba-d293-1decaa61d7fe" target="742c6e3c-533e-3029-2d88-d693f7c35a9a">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Document.sign" async="false" id="2ef671e2-08de-27b8-c3a1-8aae45fafc1e">
+      <mxCell style="image;image=images/symbols/rule.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="387" y="104.5" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="d0eb2d57-d46c-1b4b-22eb-d0044e2e1285" value="" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="742c6e3c-533e-3029-2d88-d693f7c35a9a" target="2ef671e2-08de-27b8-c3a1-8aae45fafc1e">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;&quot;,&quot;properties.path&quot;:&quot;System/scripts/AssignToManager.groovy&quot;}" id="899c39c6-3703-474b-8d08-f6c10cda61bd">
+      <mxCell style="image;image=images/script.png" vertex="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="522" y="101.5" width="38" height="38" as="geometry"/>
+      </mxCell>
+    </rule>
+    <mxCell id="4fcd364e-bd58-3ec0-aa48-c5723b4df800" value="" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="2ef671e2-08de-27b8-c3a1-8aae45fafc1e" target="899c39c6-3703-474b-8d08-f6c10cda61bd">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="0f8def56-c09e-77b0-fecd-b2090b30f0b2" value="" edge="1" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" source="899c39c6-3703-474b-8d08-f6c10cda61bd" target="f56c3ceb-a503-8dca-1b3a-0ff14b0eba86">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <version label="0.1" docid="1113" date="Mon Nov 27 2017 14:55:59 GMT+0200 (South Africa Standard Time)" id="10bdeb51-dbd6-485e-4da0-1e9f8f01d9f6">
+      <mxCell vertex="1" connectable="0" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0">
+        <mxGeometry x="5" y="5" width="40" height="20" as="geometry"/>
+      </mxCell>
+    </version>
+  </root>
+</mxGraphModel>

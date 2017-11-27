@@ -1,0 +1,13 @@
+--- !<Node>
+tree:
+  Acknowledge Termination By Employee:
+    Resignation Letter:
+      $indexes:
+        - formNo
+      $rules:
+        - {events: Document.create, rule: allocate, to: ATEResignationLetter}
+    Acknowledgement Letter:
+      $indexes:
+        - formNo
+      $rules:
+        - {events: Document.create, rule: allocate, to: ATEAcknowledgementLetter}
