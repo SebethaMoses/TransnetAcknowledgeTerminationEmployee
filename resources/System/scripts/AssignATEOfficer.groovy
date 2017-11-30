@@ -12,3 +12,5 @@ String name = gs.getMembers('Compensation Officer', null)[0]
 doc.signature().assignRole('_officer_', name)
 doc.workflow().set('_officer_', name)
 doc.parties().add(db.resolve(User.class, name))
+doc.workflow_status = 'officer'
+doc.save()

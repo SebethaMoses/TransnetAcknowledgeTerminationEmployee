@@ -19,3 +19,4 @@ String name = gs.getMembers(group, null)[0]
 doc.signature().assignRole('_manager_', name)
 doc.workflow().set('_manager_', name)
 doc.parties().add(db.resolve(User.class, name))
+doc.save()
