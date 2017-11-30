@@ -5,7 +5,7 @@ tree:
       $indexes:
         - formNo
         - sap_no
-        - name
+        - fullname
         - email
         - designation
         - division
@@ -20,7 +20,7 @@ tree:
       $indexes:
         - formNo
         - sap_no
-        - name
+        - fullname
         - email
         - designation
         - division
