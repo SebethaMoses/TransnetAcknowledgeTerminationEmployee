@@ -4,10 +4,31 @@ tree:
     Resignation Letter:
       $indexes:
         - formNo
+        - sap_no
+        - fullname
+        - email
+        - designation
+        - division
+        - manager_sap_no
+        - manager_name
+        - manager_email
+        - manager_designation
+        - {indexType: BOOLEAN, name: counter_offer}
       $rules:
         - {events: Document.create, rule: allocate, to: ATEResignationLetter}
     Acknowledgement Letter:
       $indexes:
         - formNo
+        - sap_no
+        - fullname
+        - email
+        - designation
+        - division
+        - role_level
+        - officer_sap_no
+        - officer_name
+        - officer_email
+        - officer_designation
+        - officer_division
       $rules:
         - {events: Document.create, rule: allocate, to: ATEAcknowledgementLetter}

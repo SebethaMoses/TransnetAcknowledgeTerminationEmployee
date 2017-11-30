@@ -11,7 +11,7 @@
     "full": "npm run setup && npm run build && npm run test",
     "build": "rm -rf dist/main; rm -rf build/ && gulp --gulpfile node_modules/@egis/build-tools/Gulpfile.js --cwd ./ plugin --env production"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "@egis/build-tools": "^1.2.0"
   },
   "repository": {
