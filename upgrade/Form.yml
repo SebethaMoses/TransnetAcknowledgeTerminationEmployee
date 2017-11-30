@@ -10,7 +10,7 @@ template: System/forms/ate_resignation_letter.pdf
 --- !<Form>
 autoNumber:
   padding: 5
-  prefix: AAL
+  prefix: AKL
 formType: PDF
 name: Acknowledgement Letter
 node: Acknowledge Termination By Employee/Acknowledgement Letter

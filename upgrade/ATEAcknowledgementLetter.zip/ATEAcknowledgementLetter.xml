@@ -2,62 +2,122 @@
   <root>
     <mxCell id="6fa27f74-a119-d982-1913-a6b1bf69cb8f"/>
     <mxCell id="89cfb956-af81-2e93-2d05-d154bc59568a" parent="6fa27f74-a119-d982-1913-a6b1bf69cb8f"/>
-    <start id="463acd4a-9dfe-a905-bee3-363b1fadb977">
-      <mxCell style="image;image=images/symbols/event.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="105" y="120" width="25" height="25" as="geometry"/>
+    <start label="Start" id="463acd4a-9dfe-a905-bee3-363b1fadb977">
+      <mxCell style="image;image=images/symbols/event.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="54" y="92.25" width="25" height="25" as="geometry"/>
       </mxCell>
     </start>
-    <end id="daac9ecc-8857-f3fa-b665-a2110908d334">
-      <mxCell style="image;image=images/symbols/terminate.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="1146" y="120" width="25" height="25" as="geometry"/>
+    <end label="End" id="daac9ecc-8857-f3fa-b665-a2110908d334">
+      <mxCell style="image;image=images/symbols/terminate.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="1152" y="92.25" width="25" height="25" as="geometry"/>
       </mxCell>
     </end>
-    <rule name="assignOwnership" properties="{&quot;properties.owner&quot;:&quot;${createdBy}&quot;}" id="f27c9df3-9393-3937-02d8-9313fd3378e1">
-      <mxCell style="image;image=images/owner.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="222" y="222" width="38" height="38" as="geometry"/>
+    <rule name="assignOwnership" properties="{&quot;properties.owner&quot;:&quot;${createdBy}&quot;}" label="Assign Creator" id="f27c9df3-9393-3937-02d8-9313fd3378e1">
+      <mxCell style="image;image=images/owner.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="171" y="194.25" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
     <party label="Owner" to="${owner}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" id="540fbd1e-25dc-bfc8-919c-21532c7de08d">
-      <mxCell style="image;image=images/user.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="217" y="108.5" width="48" height="48" as="geometry"/>
+      <mxCell style="image;image=images/user.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="166" y="80.75" width="48" height="48" as="geometry"/>
       </mxCell>
     </party>
-    <mxCell id="d1bf64a5-cc61-ef7a-21ae-8e70599053a6" value="owner == null || owner == &#39;&#39;" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="f27c9df3-9393-3937-02d8-9313fd3378e1" label="No owner">
+    <mxCell id="d1bf64a5-cc61-ef7a-21ae-8e70599053a6" value="owner == null || owner == &#39;&#39;" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="f27c9df3-9393-3937-02d8-9313fd3378e1" edge="1" label="No owner">
       <mxGeometry relative="1" as="geometry">
         <Array as="points">
-          <mxPoint x="118" y="243"/>
+          <mxPoint x="67" y="215.25"/>
         </Array>
       </mxGeometry>
     </mxCell>
-    <mxCell id="3a56d583-aea7-4ed2-2338-40d0733a68ac" value="owner != null &amp;&amp; owner != &#39;&#39;" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" label="Owner set">
+    <mxCell id="3a56d583-aea7-4ed2-2338-40d0733a68ac" value="owner != null &amp;&amp; owner != &#39;&#39;" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" edge="1" label="Owner set">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="fffdf45b-bae8-b066-3bff-890206a738f0" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="f27c9df3-9393-3937-02d8-9313fd3378e1" target="540fbd1e-25dc-bfc8-919c-21532c7de08d">
+    <mxCell id="fffdf45b-bae8-b066-3bff-890206a738f0" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="f27c9df3-9393-3937-02d8-9313fd3378e1" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <event label="Document.sign" async="false" id="be3a7903-052f-f53f-f79c-3ff0e5116cab">
-      <mxCell style="image;image=images/symbols/rule.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="363" y="116.5" width="32" height="32" as="geometry"/>
+      <mxCell style="image;image=images/symbols/rule.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="270" y="88.75" width="32" height="32" as="geometry"/>
       </mxCell>
     </event>
-    <mxCell id="18545895-f759-54ee-1f84-455fcb163d53" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="540fbd1e-25dc-bfc8-919c-21532c7de08d" target="be3a7903-052f-f53f-f79c-3ff0e5116cab">
+    <mxCell id="18545895-f759-54ee-1f84-455fcb163d53" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="540fbd1e-25dc-bfc8-919c-21532c7de08d" target="be3a7903-052f-f53f-f79c-3ff0e5116cab" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;&quot;,&quot;properties.path&quot;:&quot;System/scripts/AssignToManager.groovy&quot;}" id="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0">
-      <mxCell style="image;image=images/script.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
-        <mxGeometry x="540" y="113.5" width="38" height="38" as="geometry"/>
+    <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;&quot;,&quot;properties.path&quot;:&quot;System/scripts/AssignATEAcknowledgementLetter.groovy&quot;}" label="Assign" id="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0">
+      <mxCell style="image;image=images/script.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
+        <mxGeometry x="357" y="85.75" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
-    <mxCell id="81be2bf0-61cf-17fe-ada9-36215c9fda88" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="be3a7903-052f-f53f-f79c-3ff0e5116cab" target="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0">
+    <mxCell id="81be2bf0-61cf-17fe-ada9-36215c9fda88" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="be3a7903-052f-f53f-f79c-3ff0e5116cab" target="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="bf796793-fcf4-2bca-59ec-7f593808c492" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0" target="daac9ecc-8857-f3fa-b665-a2110908d334">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <version label="0.1" docid="1114" date="Mon Nov 27 2017 14:56:02 GMT+0200 (South Africa Standard Time)" id="77b5eb21-f4ab-aa51-43f1-49b3d4fcc98f">
-      <mxCell vertex="1" connectable="0" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+    <version label="0.18" docid="1114" date="Thu Nov 30 2017 10:58:08 GMT+0200 (South Africa Standard Time)" docId="1114" id="77b5eb21-f4ab-aa51-43f1-49b3d4fcc98f">
+      <mxCell parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1" connectable="0">
         <mxGeometry x="5" y="5" width="40" height="20" as="geometry"/>
       </mxCell>
     </version>
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_manager_}&quot;,&quot;properties.subject&quot;:&quot;Please review and confirm Acknowledgement Resignation Letter for Employee ${name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_manager_}\n\nResignation for Employee ${name} has been approved by ${officer_name} which requires you acknowledgement&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify" id="c72f770c-14d1-abea-4a86-92b6c0872bac">
+      <mxCell style="image;image=images/send_email.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="456" y="85.75" width="38" height="38" as="geometry"/>
+      </mxCell>
+    </rule>
+    <mxCell id="09564bc7-7530-1c62-0be3-3102d4698ddc" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0" target="c72f770c-14d1-abea-4a86-92b6c0872bac">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <party label="Party" to="${_manager_}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="911ecb9f-713f-7ea6-251e-e7f800a78f0a">
+      <audit audit="" description=""/>
+      <status status="${users}" field="_manager_"/>
+      <mxCell style="image;image=images/user.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="552" y="80.75" width="48" height="48" as="geometry"/>
+      </mxCell>
+    </party>
+    <mxCell id="c9999556-06e0-d333-4c0f-838cc5c383f5" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="c72f770c-14d1-abea-4a86-92b6c0872bac" target="911ecb9f-713f-7ea6-251e-e7f800a78f0a">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Document.sign" async="false" id="b2159ca4-8b54-0549-2de6-43617620061d">
+      <mxCell style="image;image=images/symbols/rule.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="660" y="88.75" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="35837537-4509-68d9-0dc3-9655da90b027" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="911ecb9f-713f-7ea6-251e-e7f800a78f0a" target="b2159ca4-8b54-0549-2de6-43617620061d">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${owner}&quot;,&quot;properties.subject&quot;:&quot;Acknowledgement Resignation Letter Signed for Employee ${name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${owner}\n\nThe Acknowledgement Resignation Letter for Employee ${name} has been approved&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Owner" id="8e089212-da36-65b7-af65-a0f33ef5b2ae">
+      <mxCell style="image;image=images/send_email.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="755" y="85.75" width="38" height="38" as="geometry"/>
+      </mxCell>
+    </rule>
+    <party label="Owner" to="${owner}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a">
+      <audit audit="" description=""/>
+      <status status="" field="workflow_status"/>
+      <mxCell style="image;image=images/user.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="851" y="80.75" width="48" height="48" as="geometry"/>
+      </mxCell>
+    </party>
+    <mxCell id="702400fd-0707-3267-ec47-f18854ab0acd" value="" edge="1" source="8e089212-da36-65b7-af65-a0f33ef5b2ae" target="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <event label="Document.sign" async="false" id="f199945c-ab91-d0a5-8f31-f0d8896408ef">
+      <mxCell style="image;image=images/symbols/rule.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="959" y="88.75" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </event>
+    <mxCell id="915bffd7-f274-568d-3fcb-606b666bd6bd" value="" edge="1" source="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a" target="f199945c-ab91-d0a5-8f31-f0d8896408ef" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="2f17a48d-a17a-4635-c427-3a6cbf2a1750" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="b2159ca4-8b54-0549-2de6-43617620061d" target="8e089212-da36-65b7-af65-a0f33ef5b2ae">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <rule name="file" properties="{}" label="File" id="cfb7681b-350b-fdb8-0844-3bf807695e97">
+      <mxCell style="image;image=images/file.png" vertex="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a">
+        <mxGeometry x="1053" y="85.75" width="38" height="38" as="geometry"/>
+      </mxCell>
+    </rule>
+    <mxCell id="8cb1edf5-040c-33dd-2aa6-2d6b6ebb99c7" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="f199945c-ab91-d0a5-8f31-f0d8896408ef" target="cfb7681b-350b-fdb8-0844-3bf807695e97">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="59c93fe6-4694-918a-702d-2794d3ca0e5f" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="cfb7681b-350b-fdb8-0844-3bf807695e97" target="daac9ecc-8857-f3fa-b665-a2110908d334">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
   </root>
 </mxGraphModel>
