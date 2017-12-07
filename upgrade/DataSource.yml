@@ -1,5 +1,5 @@
 --- !<DataSource>
-name: ate_employees
+name: employee_termination_employees
 query: SELECT fullname AS description, sap_no, fullname, email, designation, division
   FROM 'Acknowledge Termination By Employee/Resignation Letter'
   WHERE workflow_status = 'officer'

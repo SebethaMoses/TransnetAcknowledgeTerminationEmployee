@@ -15,7 +15,7 @@ tree:
         - manager_designation
         - {indexType: BOOLEAN, name: counter_offer}
       $rules:
-        - {events: Document.create, rule: allocate, to: ATEResignationLetter}
+        - {events: Document.create, rule: allocate, to: EmployeeTerminationResignation}
     Acknowledgement Letter:
       $indexes:
         - formNo
@@ -31,4 +31,4 @@ tree:
         - officer_designation
         - officer_division
       $rules:
-        - {events: Document.create, rule: allocate, to: ATEAcknowledgementLetter}
+        - {events: Document.create, rule: allocate, to: EmployeeTerminationAcknowledgement}
