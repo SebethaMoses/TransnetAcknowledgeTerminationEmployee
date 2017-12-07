@@ -3,15 +3,15 @@ autoNumber:
   padding: 5
   prefix: ARL
 formType: PDF
-name: Resignation Letter
+name: Employee Termination Resignation Letter
 node: Acknowledge Termination By Employee/Resignation Letter
-template: System/forms/ate_resignation_letter.pdf
+template: System/forms/employee_termination_resignation_letter.pdf
 
 --- !<Form>
 autoNumber:
   padding: 5
   prefix: AKL
 formType: PDF
-name: Acknowledgement Letter
+name: Employee Termination Acknowledge Letter
 node: Acknowledge Termination By Employee/Acknowledgement Letter
-template: System/forms/ate_acknowledgement_letter.pdf
+template: System/forms/employee_termination_acknowledgement_letter.pdf
