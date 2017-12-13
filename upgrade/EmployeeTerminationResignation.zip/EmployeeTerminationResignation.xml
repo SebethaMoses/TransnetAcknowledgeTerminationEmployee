@@ -48,14 +48,16 @@
         <mxGeometry x="876" y="68" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
-    <version label="0.5" docid="1113" date="Thu Dec 07 2017 13:34:25 GMT+0200 (South Africa Standard Time)" docId="1249" id="10bdeb51-dbd6-485e-4da0-1e9f8f01d9f6">
+    <version label="0.8" docid="1113" date="Tue Dec 12 2017 13:27:48 GMT+0200 (South Africa Standard Time)" docId="1249" id="10bdeb51-dbd6-485e-4da0-1e9f8f01d9f6">
       <mxCell parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1" connectable="0">
         <mxGeometry x="5" y="5" width="40" height="20" as="geometry"/>
       </mxCell>
     </version>
-    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_manager_}&quot;,&quot;properties.subject&quot;:&quot;Employee ${owner} Resignation Letter&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_manager_}\n\nPlease Review Resignation Letter from Employee ${owner}\n\nTo access the form, click on the link below\n\n${Permlink}&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Manager" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="652de80b-d2de-b2c0-d250-6fc44433451c">
-      <audit audit="" description=""/>
-      <status status="${Permlink}" field="Permlink"/>
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_manager_}&quot;,&quot;properties.subject&quot;:&quot;Employee ${owner} Resignation Letter&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_manager_}\n\nPlease Review Resignation Letter from Employee ${owner}\n\nTo access the form, click on the link below\n\n${perm_link}&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Manager" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="652de80b-d2de-b2c0-d250-6fc44433451c">
+
+            <audit audit="" description=""/>
+
+            <status status="" field="workflow_status"/>
       <mxCell style="image;image=images/send_email.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="444" y="68" width="38" height="38" as="geometry"/>
       </mxCell>
@@ -79,7 +81,8 @@
 
 
 
-                                                <audit audit="" description=""/>
+
+                                                      <audit audit="" description=""/>
 
 
 
@@ -87,7 +90,8 @@
 
 
 
-                                                <status status="${users}" field="_manager_"/>
+
+                                                      <status status="${users}" field="_manager_"/>
       <mxCell style="image;image=images/user.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="525" y="63" width="48" height="48" as="geometry"/>
       </mxCell>
@@ -109,13 +113,15 @@
 
 
 
-                                    <audit audit="" description=""/>
+
+                                          <audit audit="" description=""/>
 
 
 
 
 
-                                    <status status="officer" field="workflow_status"/>
+
+                                          <status status="officer" field="workflow_status"/>
       <mxCell style="image;image=images/script.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="615" y="176.5" width="38" height="38" as="geometry"/>
       </mxCell>
@@ -138,7 +144,7 @@
         </Array>
       </mxGeometry>
     </mxCell>
-    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_officer_}&quot;,&quot;properties.subject&quot;:&quot;Approved Resignation Letter for Employee ${owner}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_officer_}\n\nPlease Review Approved Resignation Letter from Employee ${owner}\n\nPlease Generate and Complete Acknowledgement Letter for sign off\n\nTo access the form, click on the link below\n\n${Permlink}&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Officer" id="003a4c51-5378-be36-75f6-3ec95cffec8e">
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_officer_}&quot;,&quot;properties.subject&quot;:&quot;Approved Resignation Letter for Employee ${owner}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_officer_}\n\nPlease Review Approved Resignation Letter from Employee ${owner}\n\nPlease Generate and Complete Acknowledgement Letter for sign off\n\nTo access the form, click on the link below\n\n${perm_link}&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Officer" id="003a4c51-5378-be36-75f6-3ec95cffec8e">
       <mxCell style="image;image=images/send_email.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="615" y="380.5" width="38" height="38" as="geometry"/>
       </mxCell>
@@ -151,7 +157,8 @@
 
 
 
-                                                <audit audit="" description=""/>
+
+                                                      <audit audit="" description=""/>
 
 
 
@@ -159,7 +166,8 @@
 
 
 
-                                                <status status="${users}" field="_officer_"/>
+
+                                                      <status status="${users}" field="_officer_"/>
       <mxCell style="image;image=images/user.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="723" y="375.5" width="48" height="48" as="geometry"/>
       </mxCell>
@@ -181,13 +189,15 @@
 
 
 
-                                    <audit audit="" description=""/>
+
+                                          <audit audit="" description=""/>
 
 
 
 
 
-                                    <status status="filed" field="workflow_status"/>
+
+                                          <status status="filed" field="workflow_status"/>
       <mxCell style="image;image=images/file.png" parent="1c77877b-a8c6-c5c9-bf55-e88138e37cb0" vertex="1">
         <mxGeometry x="921" y="380.5" width="38" height="38" as="geometry"/>
       </mxCell>

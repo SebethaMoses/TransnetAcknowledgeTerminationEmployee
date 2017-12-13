@@ -14,6 +14,7 @@ tree:
         - manager_email
         - manager_designation
         - {indexType: BOOLEAN, name: counter_offer}
+        - perm_link
       $rules:
         - {events: Document.create, rule: allocate, to: EmployeeTerminationResignation}
     Acknowledgement Letter:
@@ -30,5 +31,6 @@ tree:
         - officer_email
         - officer_designation
         - officer_division
+        - perm_link
       $rules:
         - {events: Document.create, rule: allocate, to: EmployeeTerminationAcknowledgement}
