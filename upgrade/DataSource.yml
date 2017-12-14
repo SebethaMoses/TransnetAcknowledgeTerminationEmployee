@@ -1,7 +1,7 @@
 --- !<DataSource>
 name: employee_termination_employees
-query: SELECT fullname AS description, sap_no, fullname, email, designation, division
+query: SELECT full_name AS description, sap_no, full_name, email, designation, division
   FROM 'Acknowledge Termination By Employee/Resignation Letter'
   WHERE workflow_status = 'officer'
-  ORDER BY fullname
+  ORDER BY full_name
 type: NODE
