@@ -6,13 +6,15 @@ import com.egis.kernel.Kernel
 DbManager db = Kernel.get(DbManager.class)
 DocumentModel doc = doc
 
-DocumentModel form = doc.session.spawnForm(db.resolve(Form.class, "Counter Offer Memo Form"))
+Map newValues = [
+        'employee_sap_no': doc.sap_no,
+        'employee_name': doc.full_name,
+        'employee_email': doc.email
+]
 
-def meta = form.metadata()
-meta.set('employee_sap_no': doc.sap_no)
-meta.set('employee_name': doc.fullname)
-meta.set('employee_email': doc.email)
-form.signature().setDefaultValues(meta.all)
+DocumentModel form = doc.session.spawnForm(db.resolve(Form.class, "Counter Offer Memo Form"))
+form.metadata().set(newValues)
+form.signature().setDefaultValues(newValues)
 
 form.ownership().assign(doc.session.user)
 form.links().add(doc)
