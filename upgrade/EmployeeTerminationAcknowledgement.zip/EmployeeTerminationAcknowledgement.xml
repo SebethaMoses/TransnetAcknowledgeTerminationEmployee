@@ -9,35 +9,20 @@
     </start>
     <end label="End" id="daac9ecc-8857-f3fa-b665-a2110908d334">
       <mxCell style="image;image=images/symbols/terminate.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="1317" y="83.5" width="25" height="25" as="geometry"/>
+        <mxGeometry x="936" y="83.5" width="25" height="25" as="geometry"/>
       </mxCell>
     </end>
-    <rule name="assignOwnership" properties="{&quot;properties.owner&quot;:&quot;${createdBy}&quot;}" label="Assign Creator" id="f27c9df3-9393-3937-02d8-9313fd3378e1">
-      <mxCell style="image;image=images/owner.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="142" y="185.5" width="38" height="38" as="geometry"/>
-      </mxCell>
-    </rule>
     <party label="Owner" to="${owner}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" id="540fbd1e-25dc-bfc8-919c-21532c7de08d">
       <mxCell style="image;image=images/user.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="137" y="72" width="48" height="48" as="geometry"/>
+        <mxGeometry x="87" y="72" width="48" height="48" as="geometry"/>
       </mxCell>
     </party>
-    <mxCell id="d1bf64a5-cc61-ef7a-21ae-8e70599053a6" value="owner == null || owner == &#39;&#39;" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="f27c9df3-9393-3937-02d8-9313fd3378e1" edge="1" label="No owner">
-      <mxGeometry relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="38" y="206.5"/>
-        </Array>
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="3a56d583-aea7-4ed2-2338-40d0733a68ac" value="owner != null &amp;&amp; owner != &#39;&#39;" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" edge="1" label="Owner set">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <mxCell id="fffdf45b-bae8-b066-3bff-890206a738f0" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="f27c9df3-9393-3937-02d8-9313fd3378e1" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" edge="1">
+    <mxCell id="3a56d583-aea7-4ed2-2338-40d0733a68ac" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="463acd4a-9dfe-a905-bee3-363b1fadb977" target="540fbd1e-25dc-bfc8-919c-21532c7de08d" edge="1" label="">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <event label="Document.sign" async="false" id="be3a7903-052f-f53f-f79c-3ff0e5116cab">
       <mxCell style="image;image=images/symbols/rule.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="241" y="80" width="32" height="32" as="geometry"/>
+        <mxGeometry x="183" y="80" width="32" height="32" as="geometry"/>
       </mxCell>
     </event>
     <mxCell id="18545895-f759-54ee-1f84-455fcb163d53" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="540fbd1e-25dc-bfc8-919c-21532c7de08d" target="be3a7903-052f-f53f-f79c-3ff0e5116cab" edge="1">
@@ -45,26 +30,26 @@
     </mxCell>
     <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;&quot;,&quot;properties.path&quot;:&quot;System/scripts/AssignEmployeeTerminationAcknowledgement.groovy&quot;}" label="Assign" id="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0">
       <mxCell style="image;image=images/script.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="328" y="77" width="38" height="38" as="geometry"/>
+        <mxGeometry x="267" y="77" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
     <mxCell id="81be2bf0-61cf-17fe-ada9-36215c9fda88" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="be3a7903-052f-f53f-f79c-3ff0e5116cab" target="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <version label="0.13" docid="1114" date="Fri Dec 15 2017 11:18:45 GMT+0200 (South Africa Standard Time)" docId="1248" id="77b5eb21-f4ab-aa51-43f1-49b3d4fcc98f">
+    <version label="0.20" docid="1114" date="Thu Jan 11 2018 11:54:59 GMT+0200 (South Africa Standard Time)" docId="1248" id="77b5eb21-f4ab-aa51-43f1-49b3d4fcc98f">
       <mxCell parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1" connectable="0">
         <mxGeometry x="5" y="5" width="40" height="20" as="geometry"/>
       </mxCell>
     </version>
-    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_manager_}&quot;,&quot;properties.subject&quot;:&quot;Please review and confirm Acknowledgement Resignation Letter for Employee ${full_name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_manager_}\n\nResignation for Employee ${full_name} has been approved by ${officer_name} which requires you acknowledgement&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify" id="c72f770c-14d1-abea-4a86-92b6c0872bac">
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_party_}&quot;,&quot;properties.subject&quot;:&quot;Please review and confirm Acknowledgement Resignation Letter for Employee ${full_name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_party_}\n\nResignation for Employee ${full_name} has been approved by ${officer_name} which requires you acknowledgement&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify" id="c72f770c-14d1-abea-4a86-92b6c0872bac">
       <mxCell style="image;image=images/send_email.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="427" y="77" width="38" height="38" as="geometry"/>
+        <mxGeometry x="345" y="77" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
     <mxCell id="09564bc7-7530-1c62-0be3-3102d4698ddc" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="dbabeb37-2ca1-e4e7-7ac4-8fd537b777e0" target="c72f770c-14d1-abea-4a86-92b6c0872bac" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <party label="Party" to="${_manager_}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="911ecb9f-713f-7ea6-251e-e7f800a78f0a">
+    <party label="Party" to="${_party_}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="911ecb9f-713f-7ea6-251e-e7f800a78f0a">
 
 
 
@@ -73,7 +58,8 @@
 
 
 
-                                                      <audit audit="" description=""/>
+
+                                                            <audit audit="" description=""/>
 
 
 
@@ -82,9 +68,10 @@
 
 
 
-                                                      <status status="${users}" field="_manager_"/>
+
+                                                            <status status="${users}" field="_party_"/>
       <mxCell style="image;image=images/user.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="523" y="72" width="48" height="48" as="geometry"/>
+        <mxGeometry x="420" y="72" width="48" height="48" as="geometry"/>
       </mxCell>
     </party>
     <mxCell id="c9999556-06e0-d333-4c0f-838cc5c383f5" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="c72f770c-14d1-abea-4a86-92b6c0872bac" target="911ecb9f-713f-7ea6-251e-e7f800a78f0a" edge="1">
@@ -92,54 +79,20 @@
     </mxCell>
     <event label="Document.sign" async="false" id="b2159ca4-8b54-0549-2de6-43617620061d">
       <mxCell style="image;image=images/symbols/rule.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="631" y="80" width="32" height="32" as="geometry"/>
+        <mxGeometry x="510" y="80" width="32" height="32" as="geometry"/>
       </mxCell>
     </event>
     <mxCell id="35837537-4509-68d9-0dc3-9655da90b027" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="911ecb9f-713f-7ea6-251e-e7f800a78f0a" target="b2159ca4-8b54-0549-2de6-43617620061d" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${_officer_}&quot;,&quot;properties.subject&quot;:&quot;Acknowledgement Resignation Letter Signed for Employee ${full_name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${_officer_}\n\nThe Acknowledgement Resignation Letter for Employee ${full_name} has been approved&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Officer" id="8e089212-da36-65b7-af65-a0f33ef5b2ae">
+    <rule name="sendEmail" properties="{&quot;properties.to&quot;:&quot;${owner}&quot;,&quot;properties.subject&quot;:&quot;Acknowledgement Resignation Letter Signed for Employee ${full_name}&quot;,&quot;properties.from&quot;:&quot;No-reply@Transnet.co.za&quot;,&quot;properties.inReplyTo&quot;:&quot;&quot;,&quot;properties.html&quot;:&quot;true&quot;,&quot;properties.sms&quot;:&quot;false&quot;,&quot;properties.body&quot;:&quot;Dear ${owner}\n\nThe Acknowledgement Resignation Letter for Employee ${full_name} has been approved&quot;,&quot;properties.attachSource&quot;:&quot;false&quot;,&quot;properties.attachAttachments&quot;:&quot;false&quot;,&quot;properties.attachPdf&quot;:&quot;false&quot;,&quot;properties.attachLinks&quot;:&quot;false&quot;,&quot;properties.index&quot;:&quot;&quot;}" label="Notify Owner" id="8e089212-da36-65b7-af65-a0f33ef5b2ae">
       <mxCell style="image;image=images/send_email.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="846" y="77" width="38" height="38" as="geometry"/>
+        <mxGeometry x="618" y="77" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
-    <party label="Officer" to="${_officer_}" instruction="" allocationmethod="Original Recipient" groupdistribution="Rotational" node="" menu="Workflow" currentusersonly="true" documentbased="false" id="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a">
-
-
-
-
-
-
-
-
-                                                      <audit audit="" description=""/>
-
-
-
-
-
-
-
-
-                                                      <status status="${users}" field="_officer_"/>
-      <mxCell style="image;image=images/user.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="927" y="72" width="48" height="48" as="geometry"/>
-      </mxCell>
-    </party>
-    <mxCell id="702400fd-0707-3267-ec47-f18854ab0acd" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="8e089212-da36-65b7-af65-a0f33ef5b2ae" target="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a" edge="1">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <event label="Document.sign" async="false" id="f199945c-ab91-d0a5-8f31-f0d8896408ef">
-      <mxCell style="image;image=images/symbols/rule.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="1032" y="80" width="32" height="32" as="geometry"/>
-      </mxCell>
-    </event>
-    <mxCell id="915bffd7-f274-568d-3fcb-606b666bd6bd" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="9c6dcfa6-c6a0-5cbc-c505-329bc65a875a" target="f199945c-ab91-d0a5-8f31-f0d8896408ef" edge="1">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
     <rule name="file" properties="{}" label="File" id="cfb7681b-350b-fdb8-0844-3bf807695e97">
       <mxCell style="image;image=images/file.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="1251" y="77" width="38" height="38" as="geometry"/>
+        <mxGeometry x="837" y="77" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
     <mxCell id="59c93fe6-4694-918a-702d-2794d3ca0e5f" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="cfb7681b-350b-fdb8-0844-3bf807695e97" target="daac9ecc-8857-f3fa-b665-a2110908d334" edge="1">
@@ -147,24 +100,16 @@
     </mxCell>
     <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;&quot;,&quot;properties.path&quot;:&quot;System/scripts/StartRequestExitClearance.groovy&quot;}" label="Start Exit Clearance" id="7ae00139-9729-430f-a3b1-661abc201cc1">
       <mxCell style="image;image=images/script.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
-        <mxGeometry x="1149" y="77" width="38" height="38" as="geometry"/>
-      </mxCell>
-    </rule>
-    <mxCell id="510e8568-00d5-ffa9-3e4d-5c8aeab4d7cb" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="f199945c-ab91-d0a5-8f31-f0d8896408ef" target="7ae00139-9729-430f-a3b1-661abc201cc1" edge="1">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <mxCell id="9c12c655-4d67-f88b-82cd-25ffffea8680" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="7ae00139-9729-430f-a3b1-661abc201cc1" target="cfb7681b-350b-fdb8-0844-3bf807695e97" edge="1">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <rule name="runScript" properties="{&quot;properties.sync&quot;:&quot;false&quot;,&quot;properties.script&quot;:&quot;com.egis.transnet.sap.Employee.get(doc.officer_sap_no).assignToRole(doc, \&quot;_officer_\&quot;)&quot;,&quot;properties.path&quot;:&quot;&quot;}" label="Assign" id="91f48bb1-265a-63ea-2050-91c0a7beae4a">
-      <mxCell style="image;image=images/script.png" parent="89cfb956-af81-2e93-2d05-d154bc59568a" vertex="1">
         <mxGeometry x="738" y="77" width="38" height="38" as="geometry"/>
       </mxCell>
     </rule>
-    <mxCell id="42244c27-9a05-12c3-2a29-bd43fcb96993" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="b2159ca4-8b54-0549-2de6-43617620061d" target="91f48bb1-265a-63ea-2050-91c0a7beae4a" edge="1">
+    <mxCell id="9c12c655-4d67-f88b-82cd-25ffffea8680" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="7ae00139-9729-430f-a3b1-661abc201cc1" target="cfb7681b-350b-fdb8-0844-3bf807695e97" edge="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="4c102d61-08af-8a77-cb17-70903b722462" value="" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="91f48bb1-265a-63ea-2050-91c0a7beae4a" target="8e089212-da36-65b7-af65-a0f33ef5b2ae" edge="1">
+    <mxCell id="32fc73ed-b9e6-910a-17a0-b78d7652d7d9" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="b2159ca4-8b54-0549-2de6-43617620061d" target="8e089212-da36-65b7-af65-a0f33ef5b2ae">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="31dbcba6-6700-853b-185c-c31a6e09a501" value="" edge="1" parent="89cfb956-af81-2e93-2d05-d154bc59568a" source="8e089212-da36-65b7-af65-a0f33ef5b2ae" target="7ae00139-9729-430f-a3b1-661abc201cc1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
   </root>
