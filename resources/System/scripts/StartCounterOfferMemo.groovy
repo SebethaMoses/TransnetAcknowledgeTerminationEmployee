@@ -9,7 +9,8 @@ DocumentModel doc = doc
 Map newValues = [
         'employee_sap_no': doc.sap_no,
         'employee_name': doc.full_name,
-        'employee_email': doc.email
+        'employee_email': doc.email,
+        'arl_formNo': doc.formNo
 ]
 
 DocumentModel form = doc.session.spawnForm(db.resolve(Form.class, "Counter Offer Memo Form"))
