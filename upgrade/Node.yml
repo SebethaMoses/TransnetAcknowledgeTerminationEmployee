@@ -15,7 +15,6 @@ tree:
       - officer_name
       - officer_sap_no
       - perm_link
-      - role_level
       - sap_no
       $rules:
       - {rule: allocate, events: Document.create, to: EmployeeTerminationAcknowledgement}
