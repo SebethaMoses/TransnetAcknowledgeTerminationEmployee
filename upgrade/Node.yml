@@ -1,38 +1,38 @@
 --- !<Node>
 tree:
   Acknowledge Termination By Employee:
-    Resignation Letter:
-      $indexes:
-        - formNo
-        - {name: created_date, indexType: DATE}
-        - sap_no
-        - full_name
-        - email
-        - designation
-        - business
-        - manager_sap_no
-        - manager_name
-        - manager_email
-        - manager_designation
-        - {indexType: BOOLEAN, name: counter_offer}
-        - perm_link
-      $rules:
-        - {events: Document.create, rule: allocate, to: EmployeeTerminationResignation}
     Acknowledgement Letter:
       $indexes:
-        - formNo
-        - {name: created_date, indexType: DATE}
-        - sap_no
-        - full_name
-        - email
-        - designation
-        - business
-        - role_level
-        - officer_sap_no
-        - officer_name
-        - officer_email
-        - officer_designation
-        - officer_business
-        - perm_link
+      - business
+      - {name: created_date, indexType: DATE}
+      - designation
+      - email
+      - {name: formNo, description: FormNo}
+      - full_name
+      - officer_business
+      - officer_designation
+      - officer_email
+      - officer_name
+      - officer_sap_no
+      - perm_link
+      - role_level
+      - sap_no
       $rules:
-        - {events: Document.create, rule: allocate, to: EmployeeTerminationAcknowledgement}
+      - {rule: allocate, events: Document.create, to: EmployeeTerminationAcknowledgement}
+    Resignation Letter:
+      $indexes:
+      - business
+      - {name: counter_offer, indexType: BOOLEAN}
+      - {name: created_date, indexType: DATE}
+      - designation
+      - email
+      - {name: formNo, description: FormNo}
+      - full_name
+      - manager_designation
+      - manager_email
+      - manager_name
+      - manager_sap_no
+      - perm_link
+      - sap_no
+      $rules:
+      - {rule: allocate, events: Document.create, to: EmployeeTerminationResignation}
